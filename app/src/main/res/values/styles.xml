@@ -26,6 +26,24 @@
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 
+    // checkBox Groups
+    <style name="checkBoxGroup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    // checkBoxButtons
+    <style name="checkBoxButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
     // Title for each question
     <style name="QuestionTitle">
         <item name="android:layout_width">wrap_content</item>
@@ -37,6 +55,7 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     // Question
     <style name="Question">
         <item name="android:layout_width">match_parent</item>
@@ -50,26 +69,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:shrinkColumns">*</item>
-    </style>
-
-    // Basic width and height
-    <style name="basisWidthHeight">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    // Styling LinearLayout for each question block with radio buttons (question, pics and answers)
-    <style name="fullQuestionBlock" parent="basisWidthHeight">
-        <item name="android:orientation">vertical</item>
-        <item name="android:padding">16dp</item>
-    </style>
-
-    // Submit Button
-    <style name="submitButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">25sp</item>
-        <item name="android:layout_margin">16dp</item>
     </style>
 
     // Styling picture in the top left corner in TableLayout
@@ -98,5 +97,108 @@
         <item name="android:paddingLeft">4dp</item>
         <item name="android:paddingTop">4dp</item>
         <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    // Styling picture for single picture questions
+    <style name="singleImageView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    // text shown when submit button pressed
+    <style name="textWithResult">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    // Submit Button
+    <style name="submitButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">25sp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    // picture shown when submit button pressed
+    <style name="imageWithResult">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    // Basic width and height
+    <style name="basisMpWc">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    // Styling main LinearLayout
+    <style name="fullQuestionBlock" parent="basisMpWc">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    // Main layout for the xml
+    <style name="mainLayoutActivityQuestions" parent="basisMpWc">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    // Start Button
+    <style name="startButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">25dp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="nameField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text|textCapWords</item>
+        <item name="android:paddingTop">30dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="welcomeText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="secondLine" parent="welcomeText">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="firstLine" parent="welcomeText">
+        <item name="android:textSize">65sp</item>
+    </style>
+
+    <style name="mainLayoutActivityMain">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="basisMpMp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
     </style>
 </resources>

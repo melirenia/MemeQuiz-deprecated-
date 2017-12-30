@@ -1,58 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.quizzapp.MainActivity"
-    android:background="#8BC34A">
+    style="@style/basisMpMp"
+    android:background="#8BC34A"
+    tools:context="com.example.android.quizzapp.MainActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+    <LinearLayout style="@style/mainLayoutActivityMain">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#8BC34A"
-            android:text="@string/welcome"
-            android:textSize="65sp" />
+            style="@style/firstLine"
+            android:text="@string/welcome" />
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#8BC34A"
-            android:text="@string/welcome_long"
-            android:textSize="30sp" />
+            style="@style/secondLine"
+            android:text="@string/welcome_long" />
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/name_enter"
-            android:inputType="text|textCapWords"
-            android:paddingTop="30dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="16sp" />
+            style="@style/nameField"
+            android:hint="@string/name_enter" />
 
         <Button
             android:id="@+id/startButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAllCaps="true"
-            android:text="Start"
-            android:padding="25dp"
-            android:layout_margin="16dp"
-            style="@style/Widget.AppCompat.Button.Colored" />
+            style="@style/startButton"
+            android:text="Start" />
     </LinearLayout>
 </ScrollView>
