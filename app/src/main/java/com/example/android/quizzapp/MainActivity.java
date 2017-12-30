@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 EditText name = (EditText) findViewById(R.id.name);
                 String userName = name.getText().toString();
-                if (userName.length() == 0) userName = getString(R.string.username);
+                if (userName.isEmpty()) userName = getString(R.string.username);
 
                 intent.putExtra(EXTRA_MESSAGE, userName);
                 startActivity(intent);

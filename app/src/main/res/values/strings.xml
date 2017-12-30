@@ -6,10 +6,10 @@
     <string name="welcome">Welcome</string>
     <string name="welcome_long">to the memes Quiz!</string>
 
-    <string name="answer1_1">That one who is on the left top corner</string>
-    <string name="answer1_2">Top right. That one.</string>
-    <string name="answer1_3">Woah nice glasses</string>
-    <string name="answer1_4">What a charismatic person on the right bottom corner</string>
+    <string name="answer1_1">First</string>
+    <string name="answer1_2">Second</string>
+    <string name="answer1_3">Third</string>
+    <string name="answer1_4">Fourth</string>
     <string name="question_1_Title">Question 1 / 8</string>
     <string name="question_1">Which of these actors is not a meme character?</string>
 
