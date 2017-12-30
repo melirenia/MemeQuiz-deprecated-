@@ -44,6 +44,7 @@
             android:layout_marginBottom="20dp"
             android:textSize="16sp" />
 
+        <!--REVU: текст в ресурсы-->
         <Button
             android:id="@+id/startButton"
             android:layout_width="match_parent"
