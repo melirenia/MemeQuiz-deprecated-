@@ -19,11 +19,17 @@ import android.widget.TextView;
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button submit;
+    //REVU private?
     TextView scoreResult;
     private int score = 0, buttonState = 1;
+    //REVU private?
     String userName, message;
+    //REVU private?
     ImageView picResult;
+    //REVU private?
     ScrollView getScrollView;
+
+    //REVU Диковинка эта не понятна мне
     /**
      * ID array for all RadioGroups
      */
@@ -36,6 +42,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             R.id.answers7,
             R.id.answers8
     };
+
+    //REVU и эта тоже
     /**
      * ID array for all RadioGroups with correct answers
      */
@@ -51,12 +59,15 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
 
+        //REVU опять студия на кастинг жалуется. Надо уже проверить.
+        //Собрать под старое сдк и запустить
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
+        //REVU switch тут излишен и break тоже
         switch (v.getId()){
             case R.id.submit:
                 if (buttonState == 1){
@@ -70,6 +81,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    //REVU зачем findView повторяется в двух методах? Вынеси в onCreate
     private void checkAnswer(){
         scoreResult = (TextView) findViewById(R.id.scoreResult);
         picResult = (ImageView) findViewById(R.id.pic_answer);
@@ -83,6 +96,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void resetAnswer(){
+        //REVU Зачем запускать MainActivity? Не хочет юзер заново имя вводить
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         scoreResult = (TextView) findViewById(R.id.scoreResult);
@@ -112,7 +126,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     //calculates CheckBoxes question
     private void getCheckBoxAnswers(){
-        int i = 0, k = 0;
+        int i = 0, k = 0;//REVU лучше обозвать counterТраляляля или типа того
         Resources res = getResources();
         String[] answerCB = res.getStringArray(R.array.correctCheckBoxesArr);
 
