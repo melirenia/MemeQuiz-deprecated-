@@ -53,7 +53,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
         submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(this);
-
     }
 
     @Override
@@ -65,8 +64,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     getCheckBoxAnswers();
                     checkAnswer();
                     scrollDialogDown();
-                } else resetAnswer();
-                //Toast.makeText(getApplicationContext(), "Your score is "  + score, Toast.LENGTH_SHORT).show();
+                } else {
+                    resetAnswer();
+                }
                 break;
         }
     }

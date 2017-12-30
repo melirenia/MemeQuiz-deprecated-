@@ -8,4 +8,95 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    // RadioGroups
+    <style name="RadioGroup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    // RadioButtons
+    <style name="RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    // Title for each question
+    <style name="QuestionTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    // Question
+    <style name="Question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    // tableLayout for questions with 4 pictures
+    <style name="tableLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shrinkColumns">*</item>
+    </style>
+
+    // Basic width and height
+    <style name="basisWidthHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    // Styling LinearLayout for each question block with radio buttons (question, pics and answers)
+    <style name="fullQuestionBlock" parent="basisWidthHeight">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    // Submit Button
+    <style name="submitButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">25sp</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    // Styling picture in the top left corner in TableLayout
+    <style name="pictureTopLeft">
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    // Styling picture in the top right corner in TableLayout
+    <style name="pictureTopRight">
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    // Styling picture in the bottom left corner in TableLayout
+    <style name="pictureBottomLeft">
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    // Styling picture in the bottom right corner in TableLayout
+    <style name="pictureBottomRight">
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
 </resources>
