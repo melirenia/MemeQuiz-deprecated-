@@ -98,7 +98,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         Resources res = getResources();
         String[] answerRB = res.getStringArray(R.array.correctRadioGroupsArr);
         for (int idRadioGroup : allRadioGroupsArr) {
-            RadioGroup currRadioGroup = (RadioGroup) findViewById(idRadioGroup);
+            RadioGroup currRadioGroup = findViewById(idRadioGroup);
             if (currRadioGroup.getCheckedRadioButtonId() != -1) {
                 String textRadioButton = ((RadioButton) findViewById(currRadioGroup.getCheckedRadioButtonId())).getText().toString();
                 if (textRadioButton.equals(answerRB[i])) {
@@ -114,12 +114,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         int i = 0, k = 0;
         Resources res = getResources();
         String[] answerCB = res.getStringArray(R.array.correctCheckBoxesArr);
-
         for (int idCB : allCheckBoxesArr) {
-            CheckBox currCheckBox = (CheckBox) findViewById(idCB);
+            CheckBox currCheckBox = findViewById(idCB);
             if (currCheckBox.isChecked()) {
                 String textCheckBox = ((CheckBox) findViewById(idCB)).getText().toString();
-                if (textCheckBox.equals(answerCB[i])) k++;
+                for (int j = 0; j < answerCB.length; j++) {
+                    if (textCheckBox.equals(answerCB[j])) k++;
+                }
             }
             i++;
         }
@@ -131,7 +132,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     //clear RadioButtons questions
     private void clearRadioAnswers() {
         for (int idRB : allRadioGroupsArr) {
-            RadioGroup currRadioGroup = (RadioGroup) findViewById(idRB);
+            RadioGroup currRadioGroup = findViewById(idRB);
             currRadioGroup.clearCheck();
         }
     }
@@ -139,7 +140,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     //clear CheckBoxes questions
     private void clearCheckBoxAnswers() {
         for (int idCB : allCheckBoxesArr) {
-            CheckBox currCheckBox = (CheckBox) findViewById(idCB);
+            CheckBox currCheckBox = findViewById(idCB);
             if (currCheckBox.isChecked()) currCheckBox.setChecked(false);
         }
     }
@@ -164,7 +165,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     //scrolls to the bottom of the screen when Submit button is pressed
     private void scrollDialogDown() {
-        getScrollView = (ScrollView) findViewById(R.id.scrollview);
+        getScrollView = findViewById(R.id.scrollview);
         getScrollView.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -173,7 +174,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         }, 100);
     }
 
-    //
+    /*
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -185,21 +186,17 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }).create().show();
     }
-/*
-    void createAlert(String message) {
-        new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle)
-                .setMessage(message)
-                .setCancelable(false)
-                .setNegativeButton(R.string.exit, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        exitFromApp();
-                    }
-                })
-                .setPositiveButton(R.string.new_game, new DialogInterface.OnClickListener() {
+*/
+    //void createAlert(String message) {
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage(R.string.exitQuiz)
+                .setNegativeButton(R.string.no, null)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }).create().show();
-    }*/
+    }
 }

@@ -22,4 +22,11 @@
         <item>Third</item>
         <item>Fourth</item>
     </string-array>
+
+    <string-array name="answersCheckBoxesArr">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+    </string-array>
 </resources>
