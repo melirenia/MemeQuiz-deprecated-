@@ -45,29 +45,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setMessage(R.string.exitApp)
+                .setCancelable(false)
                 .setNegativeButton(R.string.no, null)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        mProgressBar.setVisibility(View.INVISIBLE);
-                        MainActivity.super.onBackPressed();
-                    }
-                }).create().show();
-    }
-    /*
-    void createAlert(String message) {
-        new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle)
-                .setMessage(message)
-                .setCancelable(false)
-                .setNegativeButton(R.string.exit, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         exitFromApp();
                     }
-                })
-                .setPositiveButton(R.string.new_game, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    }
                 }).create().show();
-    }*/
+    }
+
+    public void exitFromApp() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 }

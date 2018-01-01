@@ -174,7 +174,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         }, 100);
     }
 
-    /*
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -182,19 +181,6 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 .setNegativeButton(R.string.no, null)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        QuizActivity.super.onBackPressed();
-                    }
-                }).create().show();
-    }
-*/
-    //void createAlert(String message) {
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setMessage(R.string.exitQuiz)
-                .setNegativeButton(R.string.no, null)
-                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }).create().show();
