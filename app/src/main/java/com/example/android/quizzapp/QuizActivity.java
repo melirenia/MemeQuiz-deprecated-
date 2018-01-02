@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -14,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -84,6 +86,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     private void resetAnswer() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        //call the destroy method to kill QuizActivity intent after redirecting to new MainActivity
+        finish();
         scoreResult.setVisibility(View.GONE);
         picResult.setVisibility(View.GONE);
         submit.setText(getString(R.string.again));
@@ -173,7 +177,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             }
         }, 100);
     }
-
+/*
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -184,5 +188,9 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 }).create().show();
+    }*/
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }

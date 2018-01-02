@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public final static String EXTRA_MESSAGE = "com.example.android.quizzapp.MESSAGE";
     private ProgressBar mProgressBar;
+    private EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.startButton) {
                 final Intent intent = new Intent(this, QuizActivity.class);
-                EditText name = findViewById(R.id.name);
+                name = findViewById(R.id.name);
                 String userName = name.getText().toString();
                 if (userName.isEmpty()) userName = getString(R.string.username);
                 intent.putExtra(EXTRA_MESSAGE, userName);
                 mProgressBar.setVisibility(View.VISIBLE);
                 startActivity(intent);
+                //call the destroy method to kill MainActivity intent after redirecting to QuizActivity
+                finish();
         }
     }
-
+/*
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
@@ -60,5 +63,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-    }
+    }*/
 }
