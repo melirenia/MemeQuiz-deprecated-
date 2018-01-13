@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuizzApp.iml" filepath="$PROJECT_DIR$/QuizzApp.iml" />
+      <module fileurl="file://C:\Users\Meliphant\AndroidStudioProjects\memequiz\QuizzApp.iml" filepath="C:\Users\Meliphant\AndroidStudioProjects\memequiz\QuizzApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Meliphant\AndroidStudioProjects\memequiz\app\app.iml" filepath="C:\Users\Meliphant\AndroidStudioProjects\memequiz\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/memequiz.iml" filepath="$PROJECT_DIR$/memequiz.iml" />
     </modules>
   </component>
 </project>
