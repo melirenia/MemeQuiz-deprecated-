@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizzApp</string>
+    <string name="name_enter">Please enter your name hero</string>
+    <string name="sumbit">Submit!</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_long">to the memes Quiz!</string>
+
+    <string name="answer1_1">First</string>
+    <string name="answer1_2">Second</string>
+    <string name="answer1_3">Third</string>
+    <string name="answer1_4">Fourth</string>
+    <string name="question_1_Title">Question 1 / 8</string>
+    <string name="question_1">Which of these actors is not a meme character?</string>
+
+    <string name="answer2_1">First</string>
+    <string name="answer2_2">Second</string>
+    <string name="answer2_3">Third</string>
+    <string name="answer2_4">Fourth</string>
+    <string name="question_2_Title">Question 2 / 8</string>
+    <string name="question_2">How does poker face look like?</string>
+
+    <string name="answer3_1">First</string>
+    <string name="answer3_2">Second</string>
+    <string name="answer3_3">Third</string>
+    <string name="answer3_4">Fourth</string>
+    <string name="question_3_Title">Question 3 / 8</string>
+    <string name="question_3">Which of these memes is the oldest?</string>
+
+    <string name="answer4_1">First</string>
+    <string name="answer4_2">Second</string>
+    <string name="answer4_3">Third</string>
+    <string name="answer4_4">Fourth</string>
+    <string name="question_4_Title">Question 4 / 8</string>
+    <string name="question_4">Which of these memes are from 2017?\n\n(note that you can choose more than one answer here)</string>
+
+    <string name="answer5_1">The Vampire Diaries</string>
+    <string name="answer5_2">The Walking Dead</string>
+    <string name="answer5_3">Supernatural</string>
+    <string name="answer5_4">Stranger Things</string>
+    <string name="question_5_Title">Question 5 / 8</string>
+    <string name="question_5">Which series this meme came from?</string>
+
+    <string name="answer6_1">Winter is coming</string>
+    <string name="answer6_2">I will always remember</string>
+    <string name="answer6_3">My life is hard, not yours</string>
+    <string name="answer6_4">Fear is the feeling of the weak</string>
+    <string name="question_6_Title">Question 6 / 8</string>
+    <string name="question_6">What is the original text to this meme?</string>
+
+    <string name="answer7_1">Horrible struggles</string>
+    <string name="answer7_2">Success story</string>
+    <string name="answer7_3">Challenge accepted</string>
+    <string name="answer7_4">When I grow up..</string>
+    <string name="question_7_Title">Question 7 / 8</string>
+    <string name="question_7">What is the meaning of this meme?</string>
+
+    <string name="answer8_1">Always happy</string>
+    <string name="answer8_2">I\'m sexy and I know it</string>
+    <string name="answer8_3">Good advise</string>
+    <string name="answer8_4">Do everything for food</string>
+    <string name="question_8_Title">Question 8 / 8</string>
+    <string name="question_8">What is the meaning of this meme?</string>
+
+    <string name="username">\%username\%</string>
+
+    <string name="again">Start again</string>
+    <string name="messageBase">Your score is:\ </string>
+    <string name="dear">Dear\ </string>
+
+    <string name="messageresultGenius">\n\nYou are the Genius.\nMan you know everything about memes and have a meme as an answer on each question.\nCmon get a life.</string>
+    <string name="messageresultCaptain">\n\nYou are the Captain Obvious, okay, not that bad.</string>
+    <string name="messageresultSlowpoke">\n\nYou are the SLOWPOKE, my dear friend.</string>
+
+    <string name="yes">Yes!</string>
+    <string name="no">Nono.</string>
+    <string name="exitApp">Are you sure you want to close the app?</string>
+    <string name="exitQuiz">Are you sure you want to start the quiz again?</string>
+</resources>

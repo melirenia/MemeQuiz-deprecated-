@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/basisMpMp"
+    android:background="#8BC34A"
+    tools:context="com.example.android.quizzapp.MainActivity">
+
+    <LinearLayout
+        style="@style/mainLayoutActivityMain">
+
+        <TextView
+            style="@style/firstLine"
+            android:text="@string/welcome" />
+
+        <TextView
+            style="@style/secondLine"
+            android:text="@string/welcome_long" />
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/nameField"
+            android:hint="@string/name_enter" />
+
+        <Button
+            android:id="@+id/startButton"
+            style="@style/startButton"
+            android:text="Start" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            style="@style/progressBar" />
+    </LinearLayout>
+</ScrollView>
